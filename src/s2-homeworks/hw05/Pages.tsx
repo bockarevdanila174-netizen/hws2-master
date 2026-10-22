@@ -15,12 +15,14 @@ function Pages() {
     return (
         <div>
             <Routes>
+                <Route path="/" element={<Navigate to={PATH.PRE_JUNIOR} replace />} />
                <Route path={PATH.PRE_JUNIOR} element={ <PreJunior/>}/>
                    <Route path={PATH.JUNIOR} element={ <Junior/>}/>
                    <Route path={PATH.JUNIOR_PLUS} element={ <JuniorPlus/>}/>
 
                    <Route path='*' element={ <Navigate to='/error404' replace/>}/>
-                   <Route path={'/error404'} element={ <Error404/>}/>
+                   <Route path='/error404' element={ <Error404/>}/>
+
 
             </Routes>
         </div>
